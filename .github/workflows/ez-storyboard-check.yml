@@ -1,0 +1,29 @@
+name: EZ storyboard contract
+
+on:
+  pull_request:
+    paths:
+      - "SKILL.md"
+      - "references/ez-storyboard-agent.md"
+      - "references/examples/ez-storyboard-vfd.json"
+      - "assets/scripts/validate-ez-storyboard.mjs"
+      - "assets/scripts/test-ez-storyboard.mjs"
+      - ".github/workflows/ez-storyboard-check.yml"
+  workflow_dispatch:
+
+jobs:
+  validate-storyboard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Syntax check
+        run: |
+          node --check assets/scripts/validate-ez-storyboard.mjs
+          node --check assets/scripts/test-ez-storyboard.mjs
+      - name: Contract tests
+        run: node assets/scripts/test-ez-storyboard.mjs

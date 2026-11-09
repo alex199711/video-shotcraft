@@ -167,6 +167,10 @@ SFX；只有完整分镜确认后才进入最终素材采集。用户从 Gallery
 9. **确定性渲染**：禁 `Date.now()`/`Math.random()`，一切伪随机固定
    种子（mulberry32/哈希，seed 从 index 派生），逐帧可复现。
 
+## EZ AI Video Production：结构化分镜与一致性控制（实验性扩展）
+
+当任务属于 **EZ AI Video Production** 多镜头制作，或用户明确要求角色、产品、道具、场景的跨镜头连续性时，阶段 3 分镜必须额外遵循 [EZ Storyboard & AI Director v0.1](references/ez-storyboard-agent.md)：冻结资产锚点、记录每个镜头的叙事目标与运镜理由、产出 `storyboard.json`，执行 `node assets/scripts/validate-ez-storyboard.mjs <storyboard.json>` 通过结构校验后再进入阶段 4。模板、自由创作、共同创作的审批模式保持不变；本扩展不修改现有 Remotion/Workbench 工程合同，也不声称自动完成 PDF 或视觉一致性评分。
+
 ## 工作流
 
 自主自由创作按 `references/pipeline.md` 从阶段 0 连续执行，不逐阶段等待用户确认。
