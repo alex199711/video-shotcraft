@@ -1,0 +1,158 @@
+{
+  "schema_version": "ez.storyboard.v0.1",
+  "project": {
+    "id": "vfd-demo-30s",
+    "title": "VFD 30-second product film (illustrative)",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080
+  },
+  "anchors": [
+    {
+      "id": "product-main",
+      "kind": "product",
+      "label": "VFD hero unit",
+      "reference_asset": "public/reference/vfd-front.jpg",
+      "must_keep": [
+        "Actual model label and manufacturer logo must match approved reference",
+        "Housing and terminal layout must be verified against product photography"
+      ],
+      "allowed_variations": [
+        "Lighting",
+        "Camera angle",
+        "Background"
+      ],
+      "evidence": [
+        "Replace with approved manufacturer datasheet and original product photos before release"
+      ]
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01",
+      "start_frame": 0,
+      "duration_frames": 150,
+      "intent": "Introduce product",
+      "shot_size": "hero",
+      "camera_motion": "dolly-in",
+      "camera_reason": "Focus attention on the actual product",
+      "visual_description": "Front view on neutral background",
+      "anchor_ids": [
+        "product-main"
+      ],
+      "source_assets": [
+        "public/reference/vfd-front.jpg"
+      ],
+      "shot_card": "spotlight-hero-card",
+      "caption": "Product introduction",
+      "sfx": [],
+      "transition": "cut",
+      "review_required": true
+    },
+    {
+      "id": "s02",
+      "start_frame": 150,
+      "duration_frames": 150,
+      "intent": "Show application context",
+      "shot_size": "wide",
+      "camera_motion": "tracking",
+      "camera_reason": "Establish industrial use case",
+      "visual_description": "Control cabinet with VFD",
+      "anchor_ids": [
+        "product-main"
+      ],
+      "source_assets": [
+        "public/reference/vfd-front.jpg"
+      ],
+      "shot_card": null,
+      "caption": "Industrial applications",
+      "sfx": [],
+      "transition": "cut",
+      "review_required": true
+    },
+    {
+      "id": "s03",
+      "start_frame": 300,
+      "duration_frames": 150,
+      "intent": "Explain motor control concept",
+      "shot_size": "medium",
+      "camera_motion": "push-in",
+      "camera_reason": "Emphasize functional relationship",
+      "visual_description": "Motor and drive explanatory animation",
+      "anchor_ids": [
+        "product-main"
+      ],
+      "source_assets": [
+        "public/reference/vfd-front.jpg"
+      ],
+      "shot_card": null,
+      "caption": "Adjustable speed control",
+      "sfx": [],
+      "transition": "cut",
+      "review_required": true
+    },
+    {
+      "id": "s04",
+      "start_frame": 450,
+      "duration_frames": 150,
+      "intent": "Inspect hardware details",
+      "shot_size": "close-up",
+      "camera_motion": "pan",
+      "camera_reason": "Reveal relevant interfaces",
+      "visual_description": "Close-up of real labeled housing and terminal area",
+      "anchor_ids": [
+        "product-main"
+      ],
+      "source_assets": [
+        "public/reference/vfd-front.jpg"
+      ],
+      "shot_card": null,
+      "caption": "Hardware overview",
+      "sfx": [],
+      "transition": "cut",
+      "review_required": true
+    },
+    {
+      "id": "s05",
+      "start_frame": 600,
+      "duration_frames": 150,
+      "intent": "Connect feature to workflow",
+      "shot_size": "wide",
+      "camera_motion": "static",
+      "camera_reason": "Give viewers context and breathing room",
+      "visual_description": "Industrial equipment montage",
+      "anchor_ids": [
+        "product-main"
+      ],
+      "source_assets": [
+        "public/reference/vfd-front.jpg"
+      ],
+      "shot_card": null,
+      "caption": "Application workflow",
+      "sfx": [],
+      "transition": "cut",
+      "review_required": true
+    },
+    {
+      "id": "s06",
+      "start_frame": 750,
+      "duration_frames": 150,
+      "intent": "Brand outro",
+      "shot_size": "hero",
+      "camera_motion": "orbit",
+      "camera_reason": "Conclude with recognizable product",
+      "visual_description": "Approved VFD image and brand signoff",
+      "anchor_ids": [
+        "product-main"
+      ],
+      "source_assets": [
+        "public/reference/vfd-front.jpg"
+      ],
+      "shot_card": "spotlight-hero-card",
+      "caption": "Learn more",
+      "sfx": [],
+      "transition": "fade",
+      "review_required": true
+    }
+  ]
+}
